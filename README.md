@@ -12,6 +12,7 @@ This is simple hexo blog theme, neither elegant ui nor beautiful animation.
 git clone --depth 1 https://github.com/shaohsiung/hexo-theme-leon.git themes/leon
 npm install hexo-generator-feed --save
 npm install hexo-renderer-pug --save
+npm install hexo-reference --save
 ```
 
 ## Enable
