@@ -25,7 +25,11 @@ div#content
   max-width 90%
 
 h1#title
-  margin-bottom 0.6em
+  margin-bottom 0.8em
+
+@media (max-width: 600px)
+  h1#title
+    text-align center
 
 div#menu-outer
   margin-top 0.5em
@@ -84,6 +88,7 @@ time
   margin-right 0.4em
   color #ccc
 
+// https://stylus-lang.com/docs/media.html
 @media (max-width: 600px)
   div.post-item
     flex-direction column
@@ -117,6 +122,13 @@ div#bottom-inner
 
 @media (max-width: 600px)
   div#bottom-inner
+    div.website-info
+      flex-direction column
+      justify-content center
+      align-items center
+      margin-top 1.6em
+    #hexo
+      margin-top 0.6em
 
 img
   max-width 100%
