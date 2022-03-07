@@ -3,6 +3,11 @@ fonts = Inter var,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Hel
 color-accent = #394867
 color-primary = #1a202c
 
+@font-face{
+  font-family: 'Merriweather';
+  src: url('../fonts/Merriweather-Bold.ttf');
+}
+
 body
   display flex
   flex-direction column
@@ -10,8 +15,10 @@ body
   align-items center /* For horizontal alignment */
   padding-top 5em
   padding-bottom 8em
-  font-family fonts
+  font-family 'Merriweather', serif
   color: color-primary
+  font-size 1.1rem
+  line-height 1.6em
 
 div#content
   // display: flex;
