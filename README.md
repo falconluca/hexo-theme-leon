@@ -1,4 +1,4 @@
-# Leon 🌏
+# Leon 🥷
 
 This is simple hexo blog theme, neither elegant ui nor beautiful animation. 
 
