@@ -2,7 +2,6 @@ extends _includes/layout.pug
 
 block content
   div#tag
-    //- h1= 'Tag: ' + page.tag
     - page.posts.each(function(article){
       .post-item
         - post = article
