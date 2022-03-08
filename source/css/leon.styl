@@ -8,6 +8,11 @@ color-primary = #1a202c
   src: url('../fonts/Merriweather-Light.ttf');
 }
 
+@font-face{
+  font-family: 'Merriweatherb';
+  src: url('../fonts/Merriweather-Black.ttf');
+}
+
 body
   display flex
   flex-direction column
@@ -50,6 +55,7 @@ div#content-outer
     strong
       font-size 1.25rem
       font-weight bold
+      font-family 'Merriweatherb', serif
     a:not([class^="page-number"]):not([class^="extend next"]):not([class^="extend prev"]):not([class^="menu-item"]):not([class^="post-tag-link"]):not([class^="post-item-link"])
       text-decoration none
       color inherit
