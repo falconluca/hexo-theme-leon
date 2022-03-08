@@ -110,8 +110,12 @@ color-border = #f3f3f3
     // 注脚跳转按钮外边距
     a[rev="footnote"]
         margin-left 0.4em
-    // 修复第一个注脚无法对齐
+    // 注脚对齐
     #footnotelist
           ol
-              li[id="fn:1"]
-                    margin-left 0.15em
+              li
+                  span
+                      display inline !important
+                      vertical-align auto
+                      word-break break-all
+                      margin-left 0 !important
