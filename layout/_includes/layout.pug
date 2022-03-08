@@ -47,7 +47,11 @@ html(lang=config.language)
             div
               a(href="https://shaohsiung.top") 碳酸饮料
               a &nbsp
+              //- FIXME 文章页config.author丢失
+              //-span #{new Date().getFullYear()}@#{config.author}
               span #{new Date().getFullYear()}@Luca Yeung
+              a(href="/atom.xml")
+                img(src="/assets/rss.png")
             #hexo
               a(href="http://beian.miit.gov.cn/") 闽ICP备2021017077号-1&nbsp
   if theme.scripts !== undefined && theme.scripts.length > 0

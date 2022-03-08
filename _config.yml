@@ -8,7 +8,6 @@ menu:
   About: /about
   GitHub: https://github.com/shaohsiung
   Twitter: /twitter
-  RSS: /atom.xml
 
 # stylesheets loaded in the <head>
 stylesheets:

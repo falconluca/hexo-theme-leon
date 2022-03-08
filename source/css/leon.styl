@@ -5,7 +5,7 @@ color-primary = #1a202c
 
 @font-face{
   font-family: 'Merriweather';
-  src: url('../fonts/Merriweather-Bold.ttf');
+  src: url('../fonts/Merriweather-Regular.ttf');
 }
 
 body
@@ -17,7 +17,7 @@ body
   padding-bottom 8em
   font-family 'Merriweather', serif
   color: color-primary
-  font-size 1.1rem
+  font-size 1rem
   line-height 1.6em
 
 div#content
@@ -25,11 +25,8 @@ div#content
   max-width 90%
 
 h1#title
+  text-align center
   margin-bottom 0.8em
-
-@media (max-width: 600px)
-  h1#title
-    text-align center
 
 div#menu-outer
   margin-top 0.5em
@@ -70,11 +67,13 @@ div#content-outer
         color color-accent
         margin-right 1em
 
+// 主页的近期文章列表
 div.post-item
   margin-bottom 1em
   display flex
-  flex-direction row
-  justify-content space-between
+  flex-direction column
+  justify-content center
+  align-items center
   p
     margin-top 0
     margin-bottom 0.5em
@@ -91,15 +90,13 @@ time
   margin-right 0.4em
   color #ccc
 
-// https://stylus-lang.com/docs/media.html
-@media (max-width: 600px)
-  div.post-item
+div#bottom-inner
+  margin-top 8em
+  div.website-info
     flex-direction column
     justify-content center
     align-items center
-
-div#bottom-inner
-  margin-top 8em
+    margin-top 1.6em
   hr
     background #CCCCCC
     height 1px
@@ -117,21 +114,12 @@ div#bottom-inner
         color: #222
     #hexo
       float right
+      margin-top 0.6em
     img
         width 1em
         height 1em
-        margin-left 1em
+        margin-left 0.5em
         margin-top 3px
-
-@media (max-width: 600px)
-  div#bottom-inner
-    div.website-info
-      flex-direction column
-      justify-content center
-      align-items center
-      margin-top 1.6em
-    #hexo
-      margin-top 0.6em
 
 img
   max-width 100%
@@ -146,10 +134,10 @@ aside
 blockquote
     background: #f9f9f9;
     border-left: 0.35em solid #ccc;
-    margin: 1.5em 10px;
+    margin: 1.5em 0;
     padding: 0.5em 10px;
     p
-        display: inline;
+      display: inline;
 blockquote.pullquote
     background none
     border-left none
@@ -166,6 +154,21 @@ blockquote.pullquote
     &.right
         margin-left: 1em
         float right
+
+// https://stackoverflow.com/a/7354648/9076327
+@media (min-width: 1025px)
+  h1#title
+    text-align left
+  div.post-item
+    flex-direction row
+    justify-content space-between
+  #hexo
+    margin-top 0
+  div#bottom-inner
+    div.website-info
+      flex-direction row
+      justify-content space-between
+      margin-top 0
 
 @import '_post'
 @import '_highlight/index'
