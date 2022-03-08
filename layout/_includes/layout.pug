@@ -28,7 +28,7 @@ html(lang=config.language)
         nav#menu-inner
           - console.log(page.path)
           if is_post() || is_category() || is_tag()
-            a#menu-back(href="javascript:history.back()") Back
+            a#menu-back(href="/") Back
           else
             each url, label in theme.menu
               if is_current(url)
@@ -46,7 +46,7 @@ html(lang=config.language)
           hr
           div(class='website-info')
             div
-              a(href="https://shaohsiung.top") 碳酸饮料
+              a(href="/") 碳酸饮料
               a &nbsp
               //- FIXME 文章页config.author丢失
               //-span #{new Date().getFullYear()}@#{config.author}
