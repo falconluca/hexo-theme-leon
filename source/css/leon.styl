@@ -39,6 +39,9 @@ div#menu-outer
   margin-top 0.5em
 
 nav#menu-inner
+  display flex
+  justify-content center
+  align-items center
   a,span
     margin-right 1em
     font-weight 520
@@ -66,11 +69,22 @@ div#content-outer
       &:hover, &:focus
         background #CBF8DF
     div#paginator
+      display flex
+      justify-content center
       margin-top 4em
       a
-        color color-accent
         margin-right 1em
+        line-height 1em
+        text-decoration none
+        color inherit
+        border-bottom 3px solid #CBF8DF
+        box-shadow inset 0 -4px 0 #cbf8df
+        background transparent
+        transition background 150ms ease
+        &:hover, &:focus
+          background #CBF8DF
       span
+        line-height 1em
         color color-accent
         margin-right 1em
 
@@ -172,6 +186,10 @@ blockquote.pullquote
     justify-content space-between
   #hexo
     margin-top 0
+  nav#menu-inner
+    justify-content start
+  div#paginator
+    justify-content start !important
   div#bottom-inner
     div.website-info
       flex-direction row
