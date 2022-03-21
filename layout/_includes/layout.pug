@@ -9,6 +9,8 @@
 - pageTitle = pageTitle.length > 0 ? pageTitle : page.slug
 - var title = pageTitle
 - if (pageTitle != config.title) pageTitle += ' │ ' + config.title
+- var configTitle = config.title
+- var configAuthor = config.author
 
 
 doctype html
@@ -28,7 +30,7 @@ html(lang=config.language)
         nav#menu-inner
           - console.log(page.path)
           if is_post() || is_category() || is_tag()
-            a#menu-back(href="/") Back
+            a#menu-back(href="javascript:history.back()") Back
           else
             each url, label in theme.menu
               if is_current(url)
@@ -46,11 +48,10 @@ html(lang=config.language)
           hr
           div(class='website-info')
             div
-              a(href="/") 碳酸饮料
+              a(href="/") #{configTitle}
               a &nbsp
-              //- FIXME 文章页config.author丢失
-              //-span #{new Date().getFullYear()}@#{config.author}
-              span #{new Date().getFullYear()}@Luca Yeung
+              //- https://hexo.io/zh-cn/docs/configuration.html
+              span #{new Date().getFullYear()}@#{configAuthor}
               a(href="/atom.xml")
                 img(src="/assets/rss.png")
             #hexo
