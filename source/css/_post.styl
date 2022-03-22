@@ -1,5 +1,10 @@
 color-border = #f3f3f3
 
+@font-face{
+  font-family: 'UbuntuMono';
+  src: url('../fonts/UbuntuMono-Regular.ttf');
+}
+
 #post
     color color-primary
     line-height 2.25em
@@ -102,10 +107,13 @@ color-border = #f3f3f3
             transition color 0.3s ease
             outline none
 
-    p
+    p, li
         code
-            background color-border
-            padding 0.2em 0.2em
+          padding 0 0.25rem
+          background #e9ecef
+          border-radius 0.25rem
+          font-size 0.954em
+          font-family 'UbuntuMono', serif !important
 
     // 注脚跳转按钮外边距
     a[rev="footnote"]

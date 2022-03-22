@@ -1,13 +1,19 @@
 wordWrap = hexo-config('code_word_wrap')
-code-font-size = 0.85em
+code-font-size = 1em
 code-font-family = JetBrains Mono, SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace
 
 highlight-border-color = #d0d7de
 
 //@require 'prismjs/index'
 
+@font-face{
+  font-family: 'UbuntuMono';
+  src: url('../fonts/UbuntuMono-Regular.ttf');
+}
+
 // https://github.com/PrismJS/prism-themes
-@import "prism-vsc-dark-plus.css"
+//@import "prism-vsc-dark-plus.css"
+@import "prism-a11y-dark.css"
 
 #post
   //pre
@@ -15,5 +21,5 @@ highlight-border-color = #d0d7de
   pre, code
     overflow auto
     font-size code-font-size
-    font-family code-font-family !important
+    font-family 'UbuntuMono', serif !important
     border-radius 1em
